@@ -1,0 +1,35 @@
+---
+name: MLOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Checkout
+        uses: actions/checkout@v2
+      - name: Validate Scripts
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './provisioners'
+        env:
+          # Avoid false-positives due to SC2154
+          # https://github.com/koalaman/shellcheck/wiki/SC2154
+          SHELLCHECK_OPTS: "-e SC2154"
+  packer:
+    name: Packer
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Checkout
+        uses: actions/checkout@v2
+      - name: Validate Template
+        uses: hashicorp/packer-github-actions@master
+        with:
+          command: validate
+          arguments: -syntax-only
+          target: mlops.pkr.hcl

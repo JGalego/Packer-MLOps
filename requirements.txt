@@ -1,0 +1,37 @@
+# JupyterLab and classic Jupyter notebooks for *interactive* data science and scientific computing
+# https://jupyter.org
+#
+# Check out Google Cloud's Jupyter Notebook manifesto and keep your notebooks tidy at all times:
+# https://cloud.google.com/blog/products/ai-machine-learning/best-practices-that-can-improve-the-life-of-any-developer-using-jupyter-notebooks
+jupyterlab==3.1.17
+notebook==6.4.4
+
+# NumPy - the swiss army knife of any data scientist
+# https://numpy.org/
+numpy==1.19.5
+
+# Pandas for data analysis and manipulation
+# http://pandas.pydata.org
+pandas==1.1.5
+
+# Dask provides advanced parallelism for analytics
+# https://dask.org/
+dask[complete]==2021.3.0
+
+# PyTorch and TensorFlow for differentiable programming and E2E ML modeling
+# https://pytorch.org/
+# https://www.tensorflow.org/
+tensorflow==2.6.0
+torch==1.9.1
+
+# Some basic NLP modules
+# https://github.com/keon/awesome-nlp#user-content-python
+gensim==4.1.2
+nltk==3.6.3
+spacy==3.1.3
+TextBlob==0.15.3
+
+# Some high-level ML frameworks
+scikit-learn==0.24.2
+transformers==4.11.3
+trax==1.3.9
