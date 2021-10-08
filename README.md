@@ -1,6 +1,6 @@
 # Packer for MLOps
 
-[![MLOps](https://github.com/JGalego/MLOps-Packer/actions/workflows/mlops.yml/badge.svg)](https://github.com/JGalego/MLOps-Packer/actions/workflows/mlops.yml)
+[![MLOps](https://github.com/JGalego/Packer-MLOps/actions/workflows/mlops.yml/badge.svg)](https://github.com/JGalego/Packer-MLOps/actions/workflows/mlops.yml)
 
 <img src="baby_bender.gif" width="300"/>
 
