@@ -43,6 +43,8 @@ Build the image:
 packer build mlops.pkr.hcl
 ```
 
+### Run
+
 Once the build is complete, import the image to VirtualBox:
 
 * Go to **File > Import Appliance...**
