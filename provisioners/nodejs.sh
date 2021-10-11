@@ -12,5 +12,5 @@
 curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/v${NVM_VERSION}/install.sh" | bash
 
 # Install node.js
-source "$HOME/.bashrc"
+. "$HOME/.bashrc"
 nvm install "${NODEJS_VERSION}"
