@@ -19,6 +19,8 @@ variable "packages" {
     gcloud      = "360.0.0-0"   # https://cloud.google.com/sdk/docs/release-notes
     kubectl     = "1.22.2",     # https://kubernetes.io/releases/
     molecule    = "3.5.2",      # https://github.com/ansible-community/molecule/releases
+    nodejs      = "14.18.0"     # https://nodejs.org/en/about/releases/
+    nvm         = "0.39.0"      # https://github.com/nvm-sh/nvm/releases
     packer      = "1.7.6",      # https://github.com/hashicorp/packer/releases
     terraform   = "1.0.8",      # https://github.com/hashicorp/terraform/releases
     vagrant     = "2.2.18",     # https://github.com/hashicorp/vagrant/releases
@@ -153,6 +155,8 @@ build {
                          "GCLOUD_VERSION=${var.packages["gcloud"]}",
                          "KUBECTL_VERSION=${var.packages["kubectl"]}",
                          "MOLECULE_VERSION=${var.packages["molecule"]}",
+                         "NODEJS_VERSION=${var.packages["nodejs"]}",
+                         "NVM_VERSION=${var.packages["nvm"]}",
                          "PACKER_VERSION=${var.packages["packer"]}",
                          "TERRAFORM_VERSION=${var.packages["terraform"]}",
                          "VAGRANT_VERSION=${var.packages["vagrant"]}",
@@ -173,6 +177,7 @@ build {
                          "provisioners/gcloud.sh",
                          "provisioners/kubectl.sh",
                          "provisioners/molecule.sh",
+                         "provisioners/nodejs.sh",
                          "provisioners/packer.sh",
                          "provisioners/terraform.sh",
                          "provisioners/vagrant.sh",
