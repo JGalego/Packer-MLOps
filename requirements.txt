@@ -16,12 +16,12 @@ pandas==1.1.5
 
 # Dask provides advanced parallelism for analytics
 # https://dask.org/
-dask[complete]==2021.3.0
+dask[complete]==2021.11.1
 
 # PyTorch and TensorFlow for differentiable programming and E2E ML modeling
 # https://pytorch.org/
 # https://www.tensorflow.org/
-tensorflow==2.6.0
+tensorflow==2.7.0
 torch==1.9.1
 
 # Some basic NLP modules
