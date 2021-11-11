@@ -6,4 +6,4 @@
 
 ## References
 
-TODO
+* (GitHub) [visenger/awesome-mlops](https://github.com/visenger/awesome-mlops) - an awesome list of references for MLOps - Machine Learning Operations

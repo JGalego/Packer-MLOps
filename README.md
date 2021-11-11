@@ -62,12 +62,12 @@ vagrant up
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_http_proxy"></a> [http_proxy](#input_http_proxy) | n/a | `string` | `""` | no |
-| <a name="input_https_proxy"></a> [https_proxy](#input_https_proxy) | n/a | `string` | `""` | no |
-| <a name="input_packages"></a> [packages](#input_packages) | n/a | `map(string)` | <pre>{<br>  "ansible": "2.10.7",<br>  "awscli": "1.20.56",<br>  "azurecli": "2.28.0-1",<br>  "dvc": "2.7.4",<br>  "gcloud": "360.0.0-0",<br>  "kubectl": "1.22.2",<br>  "molecule": "3.5.2",<br>  "nodejs": "14.18.0",<br>  "nvm": "0.39.0",<br>  "packer": "1.7.6",<br>  "terraform": "1.0.8",<br>  "vagrant": "2.2.18",<br>  "virtualbox": "6.1.26",<br>  "vscode": "1.60.2"<br>}</pre> | no |
-| <a name="input_password"></a> [password](#input_password) | n/a | `string` | `"vagrant"` | no |
-| <a name="input_username"></a> [username](#input_username) | n/a | `string` | `"vagrant"` | no |
-| <a name="input_vbox_opts"></a> [vbox_opts](#input_vbox_opts) | n/a | `map(string)` | <pre>{<br>  "accelerate_3d": "on",<br>  "disk_size": 40960,<br>  "graphics_controller": "vmsvga",<br>  "headless": "true",<br>  "mem_size": 3072,<br>  "nested_hw_virt": "on",<br>  "num_cpus": 2,<br>  "rtc_use_utc": "on",<br>  "video_mem_size": 64<br>}</pre> | no |
+| <a name="input_http_proxy"></a> [http_proxy](#input_http_proxy) | HTTP proxy configuration (`<host>:<port>`) | `string` | `""` | no |
+| <a name="input_https_proxy"></a> [https_proxy](#input_https_proxy) | HTTPS proxy configuration (`<host>:<port>`) | `string` | `""` | no |
+| <a name="input_packages"></a> [packages](#input_packages) | Version info for the installer scripts | `map(string)` | <pre>{<br>  "ansible": "2.10.7",<br>  "awscli": "1.20.56",<br>  "azurecli": "2.28.0-1",<br>  "dvc": "2.7.4",<br>  "gcloud": "360.0.0-0",<br>  "kubectl": "1.22.2",<br>  "molecule": "3.5.2",<br>  "nodejs": "14.18.0",<br>  "nvm": "0.39.0",<br>  "packer": "1.7.6",<br>  "terraform": "1.0.8",<br>  "vagrant": "2.2.18",<br>  "virtualbox": "6.1.26",<br>  "vscode": "1.60.2"<br>}</pre> | no |
+| <a name="input_password"></a> [password](#input_password) | Default box password for authentication | `string` | `"vagrant"` | no |
+| <a name="input_username"></a> [username](#input_username) | Default box username for authentication | `string` | `"vagrant"` | no |
+| <a name="input_vbox_opts"></a> [vbox_opts](#input_vbox_opts) | Default VirtualBox options <br><br> Full list of VM settings is available [here](https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm) | `map(string)` | <pre>{<br>  "accelerate_3d": "on",<br>  "disk_size": 40960,<br>  "graphics_controller": "vmsvga",<br>  "headless": "true",<br>  "mem_size": 3072,<br>  "nested_hw_virt": "on",<br>  "num_cpus": 2,<br>  "rtc_use_utc": "on",<br>  "video_mem_size": 64<br>}</pre> | no |
 
 ## Troubleshooting
 
@@ -77,5 +77,5 @@ vagrant up
 
 ## References
 
-TODO
+* (GitHub) [visenger/awesome-mlops](https://github.com/visenger/awesome-mlops) - an awesome list of references for MLOps - Machine Learning Operations
 <!-- END_PKR_DOCS -->
