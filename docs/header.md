@@ -1,4 +1,3 @@
-<!-- BEGIN_PKR_DOCS -->
 # Packer for MLOps
 
 [![MLOps](https://github.com/JGalego/Packer-MLOps/actions/workflows/mlops.yml/badge.svg)](https://github.com/JGalego/Packer-MLOps/actions/workflows/mlops.yml)
@@ -30,7 +29,7 @@ This template generates an Ubuntu-based development environment that includes bo
 
 ### Build
 
-**Requirements:**
+**Requirements:** 
 
 * [Packer](https://packer.io) `>= 1.7.6`
 * [Vagrant](https://www.vagrantup.com/) `>= 2.2.18`
@@ -57,25 +56,3 @@ or run it through [Vagrant](https://www.vagrantup.com/):
 ```bash
 vagrant up
 ```
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_http_proxy"></a> [http_proxy](#input_http_proxy) | n/a | `string` | `""` | no |
-| <a name="input_https_proxy"></a> [https_proxy](#input_https_proxy) | n/a | `string` | `""` | no |
-| <a name="input_packages"></a> [packages](#input_packages) | n/a | `map(string)` | <pre>{<br>  "ansible": "2.10.7",<br>  "awscli": "1.20.56",<br>  "azurecli": "2.28.0-1",<br>  "dvc": "2.7.4",<br>  "gcloud": "360.0.0-0",<br>  "kubectl": "1.22.2",<br>  "molecule": "3.5.2",<br>  "nodejs": "14.18.0",<br>  "nvm": "0.39.0",<br>  "packer": "1.7.6",<br>  "terraform": "1.0.8",<br>  "vagrant": "2.2.18",<br>  "virtualbox": "6.1.26",<br>  "vscode": "1.60.2"<br>}</pre> | no |
-| <a name="input_password"></a> [password](#input_password) | n/a | `string` | `"vagrant"` | no |
-| <a name="input_username"></a> [username](#input_username) | n/a | `string` | `"vagrant"` | no |
-| <a name="input_vbox_opts"></a> [vbox_opts](#input_vbox_opts) | n/a | `map(string)` | <pre>{<br>  "accelerate_3d": "on",<br>  "disk_size": 40960,<br>  "graphics_controller": "vmsvga",<br>  "headless": "true",<br>  "mem_size": 3072,<br>  "nested_hw_virt": "on",<br>  "num_cpus": 2,<br>  "rtc_use_utc": "on",<br>  "video_mem_size": 64<br>}</pre> | no |
-
-## Troubleshooting
-
-* Boot command is not being typed correctly?
-
-    > Set the environment variable `PACKER_KEY_INTERVAL` (defaults to `100ms`). For more information, please check [this](https://github.com/hashicorp/packer/issues/6247) issue.
-
-## References
-
-TODO
-<!-- END_PKR_DOCS -->

@@ -1,0 +1,38 @@
+# Adapted from https://github.com/terraform-docs/terraform-docs/blob/master/examples/.terraform-docs.yml
+
+# Starting with version 0.15.0, terraform-docs has basic support for *.pkr.hcl files
+# https://github.com/terraform-docs/terraform-docs/pull/542
+version: ">= 0.15.0"
+
+# see: https://terraform-docs.io/user-guide/configuration/formatter
+formatter: markdown table
+
+# see: https://terraform-docs.io/user-guide/configuration/header-from
+header-from: docs/header.md
+
+# see: https://terraform-docs.io/user-guide/configuration/footer-from
+footer-from: docs/footer.md
+
+# see: https://terraform-docs.io/user-guide/configuration/sections
+sections:
+  show:
+    - header
+    - inputs
+    - footer
+
+# see: https://terraform-docs.io/user-guide/configuration/settings
+settings:
+  indent: 2
+  escape: false
+  default: true
+  required: true
+  type: true
+
+# see: https://terraform-docs.io/user-guide/configuration/output
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_PKR_DOCS -->
+    {{ .Content }}
+    <!-- END_PKR_DOCS -->
