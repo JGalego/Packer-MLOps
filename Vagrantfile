@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "jgalego/mlops"
+  config.vm.box_version = "0.1.0"
 
   # Access Jupyter web UI
   config.vm.network :forwarded_port, guest: 8888, host: 8888, id: "jupyter", auto_correct: true
@@ -14,7 +15,8 @@ Vagrant.configure("2") do |config|
     # No GUI
     vb.gui = false
     # 3GB RAM
-    vb.memory = "3072"
+    vb.memory = "2048"
+    vb.cpus = 1
   end
 
   config.vm.provision :shell, env: {"MLOPS_PASSWORD" => ENV.fetch('MLOPS_PASSWORD', 'mlops')}, inline: <<-SHELL
