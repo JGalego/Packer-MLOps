@@ -4,7 +4,7 @@
 # Check out Google Cloud's Jupyter Notebook manifesto and keep your notebooks tidy at all times:
 # https://cloud.google.com/blog/products/ai-machine-learning/best-practices-that-can-improve-the-life-of-any-developer-using-jupyter-notebooks
 jupyterlab==3.1.17
-notebook==6.4.4
+notebook==6.4.11
 
 # NumPy - the swiss army knife of any data scientist
 # https://numpy.org/
@@ -21,7 +21,7 @@ dask[complete]==2021.11.1
 # PyTorch and TensorFlow for differentiable programming and E2E ML modeling
 # https://pytorch.org/
 # https://www.tensorflow.org/
-tensorflow==2.7.0
+tensorflow==2.9.1
 torch==1.9.1
 
 # Some basic NLP modules
